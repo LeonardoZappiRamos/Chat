@@ -1,0 +1,5 @@
+br\unisales\crud\modelo\Contato.class
+br\unisales\crud\controle\ContatoServlet.class
+br\unisales\crud\persistencia\MySqlFactory.class
+br\unisales\crud\repositorio\ContatoDAO.class
+br\unisales\crud\persistencia\H2Factory.class
