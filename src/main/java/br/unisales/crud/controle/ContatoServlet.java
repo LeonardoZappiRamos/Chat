@@ -92,7 +92,7 @@ protected void processaAcao(HttpServletRequest request,
     
     try {
     //captura a ação a ser efetivada
-    String acao = (request.getParameter("acao") != null) ? request.getParameter("acao") : "index";
+    String acao = (request.getParameter("acao") != null) ? request.getParameter("acao") : "home";
         try {
             //faz o tratamento da ação padrão
             switch (acao) {
@@ -122,11 +122,11 @@ protected void processaAcao(HttpServletRequest request,
 
                 case "seleciona":
                     this.t = this.dao.seleciona(Integer.parseInt(request.getParameter("id")));
-                    pagina = "index.html";
+                    pagina = "home.html";
                 break;
 
                 default:
-                pagina = "index.html";
+                pagina = "home.html";
             }
         } catch (Exception ex) {
             request.setAttribute("erro", ex);

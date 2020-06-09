@@ -5,13 +5,13 @@ import java.sql.DriverManager;
 
 public class MySqlFactory {
     //endereço (url) do servidor mysql juntamente com a porta de conexão
-    private static final String urlBD = "jdbc:mysql://localhost:1234/";
+    private static final String urlBD = "jdbc:mysql://localhost:3306/crud";
     //nome da base de dados 
-    private static final String BD = "crud";
+    //private static final String BD = "crud";
     //usuário do banco de dados
     private static final String userBD = "root";
     //senha do usuário do banco de dados
-    private static final String passBD = "";
+    private static final String passBD = "admin";
  
     private static MySqlFactory instancia = null;
 
@@ -25,7 +25,7 @@ public class MySqlFactory {
           */
          
          //as duas linhas abaixo são para a conexão com Mysql 8
-         Class.forName("com.mysql.cj.jdbc.Driver");
+         Class.forName("com.mysql.jdbc.Driver");
          conexao = DriverManager.getConnection(urlBD + "?useTimezone=true&serverTimezone=UTC", userBD, passBD);
    
          conexao.setAutoCommit(false);
