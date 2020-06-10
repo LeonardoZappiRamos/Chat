@@ -33,7 +33,7 @@ public void insere(Contato t) throws Exception {
  
 public Contato seleciona(Integer id) throws Exception {
     try (Connection connection = MySqlFactory.getCon()) {
-    PreparedStatement ps = connection.prepareStatement("select id, nome, telefone from pessoas where id = ? ");
+    PreparedStatement ps = connection.prepareStatement("select id, nome, telefone from contato where id = ? ");
     ps.setObject(1, id);
     ResultSet rs = ps.executeQuery();
     Contato p = new Contato();

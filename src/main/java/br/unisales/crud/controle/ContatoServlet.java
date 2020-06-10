@@ -124,12 +124,25 @@ protected void processaAcao(HttpServletRequest request,
                     this.t = this.dao.seleciona(Integer.parseInt(request.getParameter("id")));
                     pagina = "home.html";
                 break;
-
+                
+                case "atualizar":
+                    this.t = this.dao.seleciona(Integer.parseInt(request.getParameter("id")));
+                    request.setAttribute("contato", t);
+                    pagina = "atualiza.jsp";
+                break;
+                
+                case "acaoAtualizar":
+                    dao.atualiza(this.t);
+                    this.lista = this.dao.selecionaVarios();
+                    request.setAttribute("lista", this.lista);
+                    pagina = "lista.jsp";
+                break;
+                
                 default:
                 pagina = "home.html";
             }
         } catch (Exception ex) {
-            request.setAttribute("erro", ex);
+            request.setAttribute("erro", ex.getStackTrace());
             pagina = "erro.jsp";
         }
     //efetua o despacho da requisição para a página correta com os atributos devidamente setados

@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CRUD</title>
+        <title>Catalogo</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="Style/main.css" type="text/css"/>
+        
+        <style>
+            *{
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f5;
+        }
+        #page-home{
+            height: 100vh;
+        }
+        
+        #page-home .content{
+            width: 90%;
+            max-width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #page-home .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        #page-home .header a{
+            text-decoration: none;
+        }
+        
+        #page_home main{
+            width: 100%;   
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #page-home main button{
+            height: 80px;
+            width: 400px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        button a{
+            font-weight: bold;
+            font-family: Roboto , "sans-serif";
+            font-size: 40px;
+            margin-left: 50px;
+        }
+        
+        button span{
+            width: 16px;
+            height: 16px;
+            background: url("Public/organization.svg");
+        }
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
-        <h1>CRUD</h1>
-        <a href="PessoaServlet">Cadastro de Pessoas</a><br>
-        <a href="ContatoServlet">Cadastro de Contatos</a><br>
+        <div id="page-home">
+            <div class="content">
+                <div class="header">
+                    <h1>Bem-Vindo</h1>
+                </div>
+                <main>
+                    <button class="btn btn-secondary">
+                        <span></span>
+                        <a href="ContatoServlet">Agenda</a><br>
+                    </button>
+                </main>
+            </div>
+        </div>
     </body>
 </html>

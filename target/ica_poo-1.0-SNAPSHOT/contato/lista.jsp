@@ -60,7 +60,6 @@
                 <div class="header">
                     <h1>Contatos</h1>
                     <a href="ContatoServlet">
-                        <i class="fas fa-angle-double-right"></i>
                         Home
                     </a>
                 </div>
@@ -81,7 +80,7 @@
                                     <td>${p.nome}</td>
                                     <td>${p.telefone}</td>
                                     <td><a href="ContatoServlet?acao=exclui&id=${p.id}">Excluir</a></td>
-                                    <td><a href="ContatoServlet?acao=atualizar&id=${p.id}">Editar</a></td>
+                                    <td><a href="ContatoServlet?acao=atualizar&id=${p.id}&nome=${p.nome}&telefone=${p.telefone}">Editar</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>
